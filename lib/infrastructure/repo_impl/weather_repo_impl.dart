@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:weather_app/cred/api_creds.dart';
 import 'package:weather_app/domain/models/weather_model.dart';
 import 'package:weather_app/domain/repository/weather_repo.dart';
 import 'package:weather_app/infrastructure/network/api_services.dart';
@@ -15,7 +16,7 @@ class WeatherImplementation extends WeatherRepo {
       AppString.baseUrl,
       queryParameters: {
         'q':cityName,
-        'appid':'55acb5c980c3ce6695f94f68b8bba70d',
+        'appid':APICredential.apiId,
         'units':'metric'
       },
     );
